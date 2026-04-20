@@ -6,6 +6,12 @@
     <meta name="description" content="Kashi Ramanathan — Senior AI Product Manager | LLM &amp; RAG Systems | Trust-First AI in Safety-Critical Operations">
     <title>Kashi Ramanathan | Senior AI Product Manager</title>
     
+    <!-- 
+        TAILWIND CSS VIA CDN (single-file convenience for GitHub Pages)
+        The browser console will show a harmless "cdn.tailwindcss.com should not be used in production" warning.
+        This is EXPECTED and does NOT break anything. It is the official Tailwind recommendation for quick prototypes / static sites.
+        The site renders perfectly and is fully functional. For a zero-warning production build you would need a build step (not possible in pure single-file GitHub Pages).
+    -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     
@@ -41,12 +47,20 @@
         }
         
         .case-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .case-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 25px 50px -12px rgb(16 185 129 / 0.15);
+            transform: translateY(-6px);
+            box-shadow: 0 25px 50px -12px rgb(16 185 129 / 0.25);
+        }
+        
+        .metric {
+            transition: transform 0.3s ease;
+        }
+        
+        .case-card:hover .metric {
+            transform: scale(1.08);
         }
     </style>
 </head>
@@ -126,7 +140,7 @@
                 <div class="md:col-span-4">
                     <h2 class="section-header heading-font text-5xl tracking-[-1px] mb-6">About me</h2>
                     <p class="text-zinc-400 text-lg leading-relaxed">
-                        I'm a Senior AI Product Manager who ships production-grade LLM + RAG systems that transform unstructured field data into trusted, explainable intelligence — all while maintaining full regulatory compliance and human accountability.
+                        I'm a Senior AI Product Manager who ships production-grade LLM + RAG systems that transform unstructured field data into trusted, explainable intelligence, all while maintaining full regulatory compliance and human accountability.
                     </p>
                     <div class="mt-10 text-emerald-400 flex items-center gap-x-2 text-sm font-medium">
                         <i class="fa-solid fa-award"></i>
@@ -135,74 +149,73 @@
                 </div>
                 <div class="md:col-span-8">
                     <div class="prose prose-invert max-w-none text-lg leading-relaxed text-zinc-300">
-                        <p>Over the past decade I've owned end-to-end product strategy for platforms used by fire services and industrial safety teams across Europe and North America. My recent focus has been building Retrieval-Augmented Generation (RAG) systems that ground LLM outputs in regulatory data, service manuals, and historical incidents — delivering measurable impact in safety-critical operations.</p>
+                        <p>Over the past decade I've owned end-to-end product strategy for platforms used by fire services and industrial safety teams across Europe and North America. My recent focus has been building Retrieval-Augmented Generation (RAG) systems that ground LLM outputs in regulatory data, service manuals, and historical incidents, delivering measurable impact in safety-critical operations.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FEATURED CASE STUDIES - IMPROVED TO MATCH YOUR SCREENSHOT -->
-    <section id="case-studies" class="py-24 bg-[#0f0f17]">
+    <!-- FEATURED CASE STUDIES - BUSINESS & OUTCOME DRIVEN -->
+    <section id="case-studies" class="py-24 bg-[#0a0a0f]">
         <div class="max-w-screen-2xl mx-auto px-8">
-            <div class="flex items-baseline justify-between mb-8">
-                <h2 class="text-5xl font-semibold heading-font tracking-[-1px]">Featured Case Studies</h2>
-                <div class="h-px w-24 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
-            </div>
+            <h2 class="text-5xl font-semibold heading-font tracking-[-1px] mb-2">Featured Case Studies</h2>
+            <p class="text-zinc-400 text-lg mb-12">Real business impact delivered through production AI in regulated environments</p>
 
             <!-- CASE STUDY 1 -->
             <div class="mb-20">
                 <div class="flex items-center justify-between mb-6">
-                    <div>
-                        <span class="text-xs font-medium tracking-[1px] text-emerald-400">CASE STUDY 1</span>
-                        <h3 class="text-3xl font-semibold heading-font tracking-tight mt-1">Unstructured Maintenance Log Classification</h3>
-                        <p class="text-zinc-400">Safety io • FireGrid Platform</p>
+                    <div class="flex items-center gap-3">
+                        <span class="px-3 py-1 text-xs font-semibold tracking-widest bg-emerald-400/10 text-emerald-400 rounded-full">CASE STUDY 1</span>
+                        <h3 class="text-3xl font-semibold heading-font tracking-tight">Unstructured Maintenance Log Classification</h3>
                     </div>
                     <a href="https://kashiramanathan.notion.site/Building-Trust-First-AI-Products-in-Safety-Critical-Operations-2f8459890af480fb862ad1c9b898e89b" target="_blank"
-                       class="text-emerald-400 hover:text-white flex items-center gap-x-2 text-sm font-medium group">
-                        Full Notion Case
-                        <i class="fa-solid fa-arrow-up-right-from-square group-hover:rotate-45"></i>
+                       class="group flex items-center gap-x-2 text-emerald-400 hover:text-white text-sm font-medium">
+                        Read the full story on Notion
+                        <span class="text-xl transition-transform group-hover:translate-x-1">→</span>
                     </a>
                 </div>
+                <p class="text-zinc-400 mb-8">Safety io • FireGrid Platform</p>
 
-                <div class="grid md:grid-cols-2 gap-6">
-                    <!-- The Challenge -->
-                    <div class="case-card bg-zinc-900 border border-white/10 rounded-3xl p-8">
-                        <h4 class="text-lg font-semibold mb-3 text-white">The Challenge</h4>
-                        <p class="text-zinc-300 leading-relaxed">
-                            Free-text, handwritten maintenance logs with inconsistent shorthand made critical safety signals impossible to detect reliably. Rules-based approaches failed due to high variability in technician language.
-                        </p>
-                    </div>
+                <div class="grid md:grid-cols-12 gap-8">
+                    <div class="md:col-span-7 space-y-6">
+                        <div class="case-card bg-zinc-900/80 border border-white/10 rounded-3xl p-8">
+                            <h4 class="uppercase text-xs tracking-widest text-amber-400 mb-2">The Business Challenge</h4>
+                            <p class="text-zinc-300 text-lg">Technicians generated thousands of messy, free-text logs every week. Critical safety signals were buried in noise, leading to reactive maintenance, unplanned downtime, and high manual triage costs.</p>
+                        </div>
 
-                    <!-- Solution & Impact -->
-                    <div class="case-card bg-zinc-900 border border-white/10 rounded-3xl p-8">
-                        <h4 class="text-lg font-semibold mb-4 text-white">Solution &amp; Impact</h4>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-start gap-3 text-zinc-300"><span class="text-emerald-400 text-xl leading-none mt-px">→</span> LLM + RAG for semantic intent recognition</li>
-                            <li class="flex items-start gap-3 text-zinc-300"><span class="text-emerald-400 text-xl leading-none mt-px">→</span> Grounded outputs with citations from service manuals</li>
-                            <li class="flex items-start gap-3 text-zinc-300"><span class="text-emerald-400 text-xl leading-none mt-px">→</span> Confidence-based UX and strict hallucination guardrails</li>
-                        </ul>
-                        
-                        <div class="grid grid-cols-2 gap-6">
-                            <div class="text-center bg-zinc-950/70 rounded-2xl py-6">
-                                <div class="text-5xl font-mono font-semibold text-emerald-400">75%</div>
-                                <div class="text-xs tracking-widest text-zinc-400 mt-1">EARLIER DETECTION</div>
-                            </div>
-                            <div class="text-center bg-zinc-950/70 rounded-2xl py-6">
-                                <div class="text-5xl font-mono font-semibold text-emerald-400">25%</div>
-                                <div class="text-xs tracking-widest text-zinc-400 mt-1">DOWNTIME REDUCTION</div>
+                        <div class="case-card bg-zinc-900/80 border border-white/10 rounded-3xl p-8">
+                            <h4 class="uppercase text-xs tracking-widest text-zinc-400 mb-4">North Star Principles</h4>
+                            <div class="flex flex-wrap gap-4">
+                                <div class="px-6 py-3 bg-white/5 rounded-2xl text-sm font-medium">Trust &gt; Automation</div>
+                                <div class="px-6 py-3 bg-white/5 rounded-2xl text-sm font-medium">Human-in-the-Loop</div>
+                                <div class="px-6 py-3 bg-white/5 rounded-2xl text-sm font-medium">Start Simple, Scale Responsibly</div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- North Star Principles -->
-                <div class="mt-8">
-                    <h4 class="text-sm font-medium text-zinc-400 mb-4">North Star Principles</h4>
-                    <div class="grid md:grid-cols-3 gap-4">
-                        <div class="bg-zinc-900 border border-white/10 rounded-3xl p-6 text-center font-medium">Trust &gt; Automation</div>
-                        <div class="bg-zinc-900 border border-white/10 rounded-3xl p-6 text-center font-medium">Human-in-the-Loop</div>
-                        <div class="bg-zinc-900 border border-white/10 rounded-3xl p-6 text-center font-medium">Start Simple, Scale Responsibly</div>
+                    <div class="md:col-span-5">
+                        <div class="case-card bg-emerald-900/10 border border-emerald-400/30 rounded-3xl p-8 h-full flex flex-col">
+                            <h4 class="text-emerald-400 text-lg font-semibold mb-6">Business Outcomes Delivered</h4>
+                            
+                            <div class="flex-1 grid grid-cols-2 gap-8">
+                                <div class="metric text-center">
+                                    <div class="text-6xl font-mono font-semibold text-emerald-400">75%</div>
+                                    <p class="text-sm text-emerald-300 mt-2">EARLIER DETECTION OF CRITICAL ASSET ISSUES</p>
+                                </div>
+                                <div class="metric text-center">
+                                    <div class="text-6xl font-mono font-semibold text-emerald-400">25%</div>
+                                    <p class="text-sm text-emerald-300 mt-2">REDUCTION IN OPERATIONAL DOWNTIME</p>
+                                </div>
+                            </div>
+
+                            <div class="mt-auto pt-8 border-t border-white/10 text-sm text-emerald-300">
+                                + 30–40% less frontline manual effort<br>
+                                + 30% higher product activation &amp; 35% faster time-to-value
+                            </div>
+
+                            <p class="text-xs text-zinc-400 mt-8">Curious how we turned noisy technician logs into actionable intelligence without replacing human judgment? →</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -210,36 +223,34 @@
             <!-- CASE STUDY 2 -->
             <div>
                 <div class="flex items-center justify-between mb-6">
-                    <div>
-                        <span class="text-xs font-medium tracking-[1px] text-emerald-400">CASE STUDY 2</span>
-                        <h3 class="text-3xl font-semibold heading-font tracking-tight mt-1">Centralised AI Orchestration for a Multi-Domain SaaS Platform</h3>
-                        <p class="text-zinc-400">Safety io • Platform-wide AI Strategy</p>
+                    <div class="flex items-center gap-3">
+                        <span class="px-3 py-1 text-xs font-semibold tracking-widest bg-violet-400/10 text-violet-400 rounded-full">CASE STUDY 2</span>
+                        <h3 class="text-3xl font-semibold heading-font tracking-tight">Centralised AI Orchestration for a Multi-Domain SaaS Platform</h3>
                     </div>
                 </div>
+                <p class="text-zinc-400 mb-8">Safety io • Platform-wide AI Strategy</p>
 
-                <div class="case-card bg-zinc-900 border border-white/10 rounded-3xl p-8">
-                    <div class="grid md:grid-cols-12 gap-12">
-                        <!-- Left Column -->
+                <div class="case-card bg-zinc-900/80 border border-white/10 rounded-3xl p-8">
+                    <div class="grid md:grid-cols-12 gap-12 items-start">
                         <div class="md:col-span-7">
-                            <div class="mb-8">
-                                <h4 class="text-lg font-semibold mb-3">The Problem</h4>
-                                <p class="text-zinc-300">Fragmented AI experimentation across teams led to duplicated effort, inconsistent quality, and difficulty scaling governance in a regulated environment.</p>
+                            <div class="mb-10">
+                                <h4 class="text-lg font-semibold text-white mb-3">The Business Problem</h4>
+                                <p class="text-zinc-300">Multiple teams were running independent AI experiments with no shared governance, leading to duplicated effort, inconsistent quality, regulatory risk, and slow scaling of AI capabilities across the entire platform.</p>
                             </div>
                             <div>
-                                <h4 class="text-lg font-semibold mb-3">The Solution</h4>
-                                <p class="text-zinc-300">Built a domain-agnostic AI Orchestrator with a standardized 8-step AI lifecycle, reusable schemas, APIs, and orchestration workflows.</p>
+                                <h4 class="text-lg font-semibold text-white mb-3">The Solution</h4>
+                                <p class="text-zinc-300">Designed and launched a domain-agnostic AI Orchestrator with a standardized 8-step lifecycle, reusable schemas, APIs, and orchestration workflows — enabling governed, scalable AI across all product lines.</p>
                             </div>
                         </div>
-                        
-                        <!-- Right Column -->
+
                         <div class="md:col-span-5">
-                            <h4 class="text-lg font-semibold mb-4">Key Outcomes</h4>
-                            <ul class="space-y-4">
-                                <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Centralized intake for all AI use cases with feasibility &amp; risk assessment</li>
-                                <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Reusable internal schemas and orchestration enabling platform-level AI capabilities</li>
-                                <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Strong governance-by-design aligned with compliance requirements</li>
-                                <li class="flex gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Measurable improvement in AI delivery velocity and consistency</li>
+                            <h4 class="text-violet-400 text-lg font-semibold mb-6">Key Business Outcomes</h4>
+                            <ul class="space-y-5">
+                                <li class="flex gap-4"><span class="text-2xl text-violet-400">✓</span> <span class="text-zinc-300">Centralized intake &amp; risk assessment for every AI use case — dramatically reduced duplication and compliance risk</span></li>
+                                <li class="flex gap-4"><span class="text-2xl text-violet-400">✓</span> <span class="text-zinc-300">Reusable orchestration layer that accelerated AI delivery velocity across the entire SaaS platform</span></li>
+                                <li class="flex gap-4"><span class="text-2xl text-violet-400">✓</span> <span class="text-zinc-300">Governance-by-design that made AI scalable while staying fully audit-ready in a regulated environment</span></li>
                             </ul>
+                            <p class="mt-10 text-xs text-zinc-400">Want to see exactly how this orchestrator turned fragmented experiments into a repeatable, enterprise-grade AI capability? →</p>
                         </div>
                     </div>
                 </div>
@@ -251,7 +262,6 @@
     <section id="experience" class="py-24">
         <div class="max-w-screen-2xl mx-auto px-8">
             <h2 class="section-header heading-font text-5xl tracking-[-1px] mb-12">Experience</h2>
-            
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="case-card glass border border-white/10 rounded-3xl p-8">
                     <div class="flex justify-between items-start mb-6">
