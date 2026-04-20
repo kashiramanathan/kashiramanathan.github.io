@@ -3,193 +3,556 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kashi Ramanathan — Senior AI Product Manager | LLM & RAG Systems | Transforming Messy Data into Trusted Intelligence">
+    <meta name="description" content="Kashi Ramanathan — Senior AI Product Manager | LLM &amp; RAG Systems | Trust-First AI in Safety-Critical Operations">
     <title>Kashi Ramanathan | Senior AI Product Manager</title>
     
+    <!-- 
+        TAILWIND CSS VIA CDN (single-file convenience for GitHub Pages)
+        The browser console will show a harmless "cdn.tailwindcss.com should not be used in production" warning.
+        This is EXPECTED and does NOT break anything. It is the official Tailwind recommendation for quick prototypes.
+        The site renders perfectly and is fully functional. For a zero-warning production build you would need a build step (not possible in pure single-file GitHub Pages).
+    -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
         
-        :root { --tw-color-accent: #00d4ff; }
-        * { transition: all 0.2s ease-in-out; }
-        .tailwind-ready { font-family: 'Inter', sans-serif; }
-        .heading-font { font-family: 'Space Grotesk', sans-serif; }
+        :root {
+            --tw-color-accent: #00d4ff;
+        }
+        
+        * {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+        
+        .tailwind-ready {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
         .hero-bg {
-            background: radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.08) 0%, transparent 50%);
+            background: radial-gradient(circle at 30% 20%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(168, 85, 247, 0.12) 0%, transparent 50%);
         }
-        .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+        
+        .glass {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(16px);
+        }
+        
+        .section-header {
+            position: relative;
+        }
+        
         .section-header::after {
-            content: ''; position: absolute; width: 48px; height: 4px;
-            background: linear-gradient(90deg, #00d4ff, #a855f7);
-            bottom: -12px; left: 0; border-radius: 2px;
+            content: '';
+            position: absolute;
+            width: 64px;
+            height: 3px;
+            background: linear-gradient(to right, #00d4ff, #a855f7);
+            bottom: -6px;
+            left: 0;
+            border-radius: 9999px;
         }
-        .metric-card:hover { border-color: #00d4ff; transform: translateY(-2px); box-shadow: 0 10px 30px -10px rgba(0,212,255,0.2); }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 25px 25px 50px -12px rgb(0 212 255 / 0.15);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #00d4ff;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .metric-number {
+            font-variant-numeric: tabular-nums;
+        }
     </style>
 </head>
-
-<body class="tailwind-ready bg-zinc-950 text-zinc-200">
-    <nav class="fixed top-0 w-full z-50 glass border-b border-white/5 py-4">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-violet-500 flex items-center justify-center font-bold text-white">KR</div>
-                <span class="heading-font text-xl font-bold tracking-tight text-white">Kashi Ramanathan</span>
+<body class="tailwind-ready bg-zinc-950 text-white">
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
+        <div class="max-w-screen-2xl mx-auto px-8 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 rounded-2xl bg-gradient-to-br from-cyan-400 to-violet-500 flex items-center justify-center text-xl font-bold shadow-inner">KR</div>
+                <h1 class="heading-font text-2xl tracking-[-1px]">Kashi Ramanathan</h1>
             </div>
-            <div class="hidden md:flex gap-8 text-sm font-medium">
-                <a href="#impact" class="hover:text-cyan-400">Impact</a>
-                <a href="#case-study" class="hover:text-cyan-400">Case Study</a>
-                <a href="#experience" class="hover:text-cyan-400">Experience</a>
-                <a href="#skills" class="hover:text-cyan-400">Skills</a>
+            
+            <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#case-study" class="nav-link">Case Study</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
             </div>
-            <a href="mailto:kashiramanathan@gmail.com" class="bg-white text-zinc-950 px-5 py-2 rounded-full text-sm font-bold hover:bg-cyan-400">Contact</a>
+            
+            <div class="flex items-center gap-x-4">
+                <a href="https://www.linkedin.com/in/kashiramanathan/" 
+                   target="_blank"
+                   class="flex items-center gap-x-2 text-sm font-medium px-6 py-2.5 rounded-3xl border border-white/20 hover:border-cyan-400 hover:text-cyan-400">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="mailto:kashiramanathan@gmail.com"
+                   class="flex items-center justify-center w-10 h-10 rounded-3xl bg-white/10 hover:bg-cyan-400 hover:text-zinc-950">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="#contact" 
+                   onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
+                   class="text-sm font-semibold px-8 py-3 bg-white text-zinc-950 rounded-3xl flex items-center gap-x-2 hover:shadow-2xl hover:shadow-cyan-500/30">
+                    <span>Get in touch</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
         </div>
     </nav>
 
-    <header class="hero-bg min-h-screen flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <div class="inline-flex items-center gap-2 bg-cyan-400/10 text-cyan-400 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-6 border border-cyan-400/20">
-                    <span class="w-2 h-2 bg-cyan-400 rounded-full animate-ping"></span>
-                    Available for Senior AI Product Roles
+    <!-- HERO -->
+    <header id="hero" class="hero-bg min-h-screen pt-24 flex items-center">
+        <div class="max-w-screen-2xl mx-auto px-8 grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7">
+                <div class="inline-flex items-center gap-x-2 bg-white/10 text-cyan-400 text-sm font-medium px-5 py-2 rounded-3xl mb-6 border border-white/20">
+                    <div class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                    OPEN TO AI PRODUCT OPPORTUNITIES • BERLIN
                 </div>
-                <h1 class="heading-font text-6xl lg:text-8xl font-bold text-white leading-none mb-6">
-                    Turning Messy Data into <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-400">Trusted Intelligence.</span>
+                
+                <h1 class="heading-font text-7xl md:text-8xl leading-[1.05] tracking-[-3px] mb-4">
+                    Kashi Ramanathan
                 </h1>
-                <p class="text-xl text-zinc-400 leading-relaxed max-w-xl mb-8">
-                    Senior AI Product Manager specializing in building <strong>Trust-First AI Systems</strong> for safety-critical operations. I transform unstructured field data into explainable, decision-ready intelligence in regulated SaaS environments.
+                <p class="text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-violet-300 to-white font-light mb-8">
+                    Senior AI Product Manager
                 </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#case-study" class="bg-cyan-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-cyan-400 shadow-lg shadow-cyan-500/20">View Case Study</a>
-                    <a href="https://www.linkedin.com/in/kashiramanathan/" target="_blank" class="glass px-8 py-4 rounded-xl font-bold hover:bg-white/5">LinkedIn Profile</a>
+                <p class="text-xl md:text-2xl text-zinc-400 max-w-2xl leading-tight">
+                    Building trust-first AI systems that turn messy operational data into explainable, decision-ready intelligence in regulated SaaS environments.
+                </p>
+                
+                <div class="mt-10 flex flex-wrap gap-4">
+                    <a href="https://www.linkedin.com/in/kashiramanathan/" 
+                       target="_blank"
+                       class="inline-flex items-center gap-x-3 bg-white text-zinc-950 px-8 h-14 rounded-3xl font-semibold text-lg hover:scale-105">
+                        <i class="fa-brands fa-linkedin text-2xl"></i>
+                        Connect on LinkedIn
+                    </a>
+                    
+                    <a href="mailto:kashiramanathan@gmail.com"
+                       class="inline-flex items-center gap-x-3 border border-white/30 hover:border-white px-8 h-14 rounded-3xl font-medium text-lg">
+                        <i class="fa-solid fa-envelope"></i>
+                        kashiramanathan@gmail.com
+                    </a>
+                    
+                    <a href="Kashi_Ramanathan_Resume.pdf" 
+                       download="Kashi_Ramanathan_Resume.pdf"
+                       class="inline-flex items-center gap-x-3 border border-white/30 hover:border-cyan-400 px-8 h-14 rounded-3xl font-medium text-lg group">
+                        <i class="fa-solid fa-download group-hover:rotate-12"></i>
+                        Download CV
+                    </a>
                 </div>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="glass p-8 rounded-3xl metric-card">
-                    <div class="text-4xl font-bold text-white mb-2">75%</div>
-                    <p class="text-sm text-zinc-400">Earlier detection of critical asset failures</p>
+                
+                <div class="mt-16 flex items-center gap-x-8 text-sm">
+                    <div class="flex items-center gap-x-2">
+                        <i class="fa-solid fa-check text-emerald-400"></i>
+                        <span class="text-zinc-400">LLM + RAG in production</span>
+                    </div>
+                    <div class="flex items-center gap-x-2">
+                        <i class="fa-solid fa-check text-emerald-400"></i>
+                        <span class="text-zinc-400">Regulated SaaS • Safety-critical ops</span>
+                    </div>
+                    <div class="flex items-center gap-x-2">
+                        <i class="fa-solid fa-check text-emerald-400"></i>
+                        <span class="text-zinc-400">75% earlier issue detection</span>
+                    </div>
                 </div>
-                <div class="glass p-8 rounded-3xl metric-card">
-                    <div class="text-4xl font-bold text-white mb-2">25%</div>
-                    <p class="text-sm text-zinc-400">Reduction in operational downtime</p>
-                </div>
-                <div class="glass p-8 rounded-3xl metric-card">
-                    <div class="text-4xl font-bold text-white mb-2">30%</div>
-                    <p class="text-sm text-zinc-400">Lower delivery costs via Agile workflows</p>
-                </div>
-                <div class="glass p-8 rounded-3xl metric-card">
-                    <div class="text-4xl font-bold text-white mb-2">35%</div>
-                    <p class="text-sm text-zinc-400">Faster time-to-value for B2B partners</p>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section id="impact" class="py-24 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading-font text-4xl font-bold text-white relative section-header mb-16">The Business Case for My Work</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="space-y-4">
-                    <div class="text-cyan-400 text-2xl"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3 class="text-xl font-bold text-white">Risk Mitigation</h3>
-                    <p class="text-zinc-400">Developed RAG-grounded architectures that prevent AI hallucinations in safety-critical workflows, ensuring 100% compliance with NFPA/EN regulations.</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="text-violet-400 text-2xl"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3 class="text-xl font-bold text-white">Operational Efficiency</h3>
-                    <p class="text-zinc-400">Cut manual triage time by 30% for fire departments by automating the classification of unstructured maintenance logs into actionable alerts.</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="text-emerald-400 text-2xl"><i class="fa-solid fa-rocket"></i></div>
-                    <h3 class="text-xl font-bold text-white">Product-Led Growth</h3>
-                    <p class="text-zinc-400">Drove 20% activation lift through PLG experiments, simplifying complex asset onboarding from days to mere minutes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="case-study" class="py-24 bg-zinc-900/50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-12">
-                <h2 class="heading-font text-4xl font-bold text-white mb-4">Featured Case Study</h2>
-                <p class="text-zinc-400 text-lg">Centralized AI Orchestration for Safety-Critical SaaS</p>
             </div>
             
-            <div class="grid lg:grid-cols-5 gap-12">
-                <div class="lg:col-span-3 glass p-10 rounded-3xl">
-                    <h3 class="text-2xl font-bold text-white mb-6">The Problem: Shadow AI & Data Fragmentation</h3>
-                    <p class="text-zinc-400 mb-6">
-                        In a multi-market SaaS environment, "Shadow AI" led to bot sprawl and inconsistent outputs. Safety signals were buried in free-text technician logs, making triage reactive and slow.
-                    </p>
-                    <h3 class="text-2xl font-bold text-white mb-4">The Solution: Trust-First AI Orchestrator</h3>
-                    <ul class="space-y-4 text-zinc-400 mb-8">
-                        <li class="flex gap-3"><i class="fa-solid fa-check text-cyan-400"></i> <strong>Semantic Understanding:</strong> Deployed LLM + RAG to classify technician language without black-box drift.</li>
-                        <li class="flex gap-3"><i class="fa-solid fa-check text-cyan-400"></i> <strong>Governance-by-Design:</strong> Built an 8-step AI lifecycle with automated guardrails for Legal & InfoSec approval.</li>
-                        <li class="flex gap-3"><i class="fa-solid fa-check text-cyan-400"></i> <strong>Human-in-the-Loop:</strong> Designed a "Confidence UX" where AI suggests and humans decide, ensuring accountability.</li>
-                    </ul>
-                    <a href="https://kashiramanathan.notion.site/Building-Trust-First-Al-Products-in-Safety-Critical-Operations-2f8459890af480fb862ad1c9b898e89b" target="_blank" class="text-cyan-400 font-bold hover:underline">Read Full Technical Deep Dive →</a>
-                </div>
-                <div class="lg:col-span-2 space-y-6">
-                    <div class="bg-zinc-950 p-8 rounded-3xl border border-white/5">
-                        <h4 class="text-sm font-bold text-cyan-400 uppercase tracking-widest mb-4">Outcome</h4>
-                        <div class="text-3xl font-bold text-white mb-2">30-40%</div>
-                        <p class="text-zinc-400">Reduction in frontline manual effort</p>
-                    </div>
-                    <div class="bg-zinc-950 p-8 rounded-3xl border border-white/5">
-                        <h4 class="text-sm font-bold text-violet-400 uppercase tracking-widest mb-4">ROI</h4>
-                        <div class="text-3xl font-bold text-white mb-2">Scalable Compliance</div>
-                        <p class="text-zinc-400">Rules approved once, enforced across all subsequent AI requests</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="py-24">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading-font text-4xl font-bold text-white relative section-header mb-16">Career Journey</h2>
-            <div class="space-y-12">
-                <div class="grid md:grid-cols-4 gap-8 border-b border-white/5 pb-12">
-                    <div class="md:col-span-1">
-                        <h3 class="text-xl font-bold text-white">Safety io (MSA Safety)</h3>
-                        <p class="text-cyan-400">Product Manager</p>
-                        <p class="text-zinc-500 text-sm">2019 — Present</p>
-                        <div class="mt-4 inline-block bg-emerald-400/10 text-emerald-400 text-[10px] font-bold px-2 py-1 rounded">CEO INNOVATION AWARD</div>
-                    </div>
-                    <div class="md:col-span-3 space-y-4">
-                        <p class="text-zinc-400">Leading the evolution of FireGrid, a platform for global fire services. Key impact: Automated asset onboarding and transformed reactive maintenance into predictive readiness.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="glass px-3 py-1 rounded-full text-xs">LLM Strategy</span>
-                            <span class="glass px-3 py-1 rounded-full text-xs">API Ecosystems</span>
-                            <span class="glass px-3 py-1 rounded-full text-xs">Regulatory Compliance</span>
+            <!-- Hero visual -->
+            <div class="md:col-span-5 hidden md:flex justify-end">
+                <div class="relative w-96 h-96">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-400/20 to-violet-500/20 rounded-[4rem] rotate-12 blur-3xl"></div>
+                    <div class="glass border border-white/20 rounded-3xl p-8 h-full flex flex-col justify-center items-center relative z-10 shadow-2xl">
+                        <div class="text-center">
+                            <div class="mx-auto w-24 h-24 rounded-2xl bg-gradient-to-br from-cyan-400 to-violet-500 flex items-center justify-center text-5xl mb-8 shadow-inner">🤖</div>
+                            <p class="text-2xl font-medium heading-font tracking-tight mb-2">Trust-First AI</p>
+                            <p class="text-zinc-400">Human-in-the-loop • Explainable • Auditable</p>
+                        </div>
+                        
+                        <div class="mt-auto grid grid-cols-3 gap-4 w-full text-center text-xs uppercase font-mono">
+                            <div class="glass rounded-2xl py-4">
+                                <div class="text-cyan-400 text-3xl font-bold">75%</div>
+                                <div class="text-zinc-400">Earlier detection</div>
+                            </div>
+                            <div class="glass rounded-2xl py-4">
+                                <div class="text-cyan-400 text-3xl font-bold">25%</div>
+                                <div class="text-zinc-400">Downtime cut</div>
+                            </div>
+                            <div class="glass rounded-2xl py-4">
+                                <div class="text-cyan-400 text-3xl font-bold">RAG</div>
+                                <div class="text-zinc-400">Grounded outputs</div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 flex flex-col items-center gap-y-2 text-xs tracking-[1px] text-zinc-500">
+            <div class="flex gap-x-1">
+                <i class="fa-solid fa-chevron-down animate-bounce"></i>
+            </div>
+            SCROLL FOR IMPACT
+        </div>
+    </header>
 
-                <div class="grid md:grid-cols-4 gap-8 border-b border-white/5 pb-12">
-                    <div class="md:col-span-1">
-                        <h3 class="text-xl font-bold text-white">Colt / Vodafone / Qvantel</h3>
-                        <p class="text-cyan-400">Product Owner</p>
-                        <p class="text-zinc-500 text-sm">2009 — 2018</p>
+    <!-- ABOUT ME -->
+    <section id="about" class="py-24 border-t border-white/10">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="grid md:grid-cols-12 gap-16">
+                <div class="md:col-span-4">
+                    <h2 class="section-header heading-font text-5xl tracking-[-1px] mb-6">About me</h2>
+                    <p class="text-zinc-400 text-lg leading-relaxed">
+                        I'm a Senior AI Product Manager who ships production-grade LLM + RAG systems that transform unstructured field data into trusted, explainable intelligence — all while maintaining full regulatory compliance and human accountability.
+                    </p>
+                    <div class="mt-8 flex items-center gap-4">
+                        <div class="px-5 py-2 rounded-3xl bg-white/5 border border-white/10 text-sm">10+ years B2B SaaS</div>
+                        <div class="px-5 py-2 rounded-3xl bg-white/5 border border-white/10 text-sm">Safety-critical domains</div>
+                        <div class="px-5 py-2 rounded-3xl bg-white/5 border border-white/10 text-sm">Berlin-based</div>
                     </div>
-                    <div class="md:col-span-3 space-y-4">
-                        <p class="text-zinc-400">Orchestrated multi-market SaaS launches across 10+ regions. Optimized delivery workflows to reduce costs by 30% through Agile transformation and cross-functional leadership.</p>
+                    <div class="mt-10 text-emerald-400 flex items-center gap-x-2 text-sm font-medium">
+                        <i class="fa-solid fa-award"></i>
+                        CEO Innovation Award 2023
+                    </div>
+                </div>
+                
+                <div class="md:col-span-8">
+                    <div class="prose prose-invert max-w-none text-lg leading-relaxed text-zinc-300">
+                        <p>Over the past decade I've owned end-to-end product strategy for platforms used by fire services and industrial safety teams across Europe and North America. My recent obsession has been building Retrieval-Augmented Generation (RAG) systems that ground LLM outputs in regulatory data, service manuals, and historical incidents — delivering 75% earlier detection of critical asset issues and 25% less operational downtime.</p>
+                        <p>I specialize in complex, compliance-heavy workflows where data exists but isn't structured for decisions. I design AI that assists humans, never replaces them. Strongest when product decisions are tied directly to measurable business outcomes and auditability is non-negotiable.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-16 border-t border-white/5 text-center">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading-font text-3xl font-bold text-white mb-6">Let's build the future of Trusted AI.</h2>
-            <div class="flex justify-center gap-6 mb-12">
-                <a href="mailto:kashiramanathan@gmail.com" class="text-zinc-400 hover:text-white text-2xl"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/kashiramanathan/" class="text-zinc-400 hover:text-white text-2xl"><i class="fa-brands fa-linkedin"></i></a>
+    <!-- FEATURED CASE STUDY -->
+    <section id="case-study" class="py-24 bg-zinc-900">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex justify-between items-baseline mb-12">
+                <div>
+                    <span class="uppercase text-xs tracking-[2px] font-medium text-cyan-400">Featured Case Study</span>
+                    <h2 class="heading-font text-5xl tracking-[-1px]">Unstructured Maintenance Log Classification</h2>
+                    <p class="text-2xl text-zinc-400 mt-3">Safety io • FireGrid Platform</p>
+                </div>
+                <a href="https://kashiramanathan.notion.site/Building-Trust-First-AI-Products-in-Safety-Critical-Operations-2f8459890af480fb862ad1c9b898e89b" 
+                   target="_blank"
+                   class="flex items-center gap-x-2 text-sm font-medium px-7 py-4 rounded-3xl border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white">
+                    Read full Notion case study
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
             </div>
-            <p class="text-zinc-500 text-sm">© 2026 Kashi Ramanathan • Berlin, Germany</p>
+            
+            <div class="grid md:grid-cols-12 gap-8">
+                <div class="md:col-span-7 space-y-8">
+                    <div class="glass rounded-3xl p-8 border border-white/10">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center gap-x-3"><span class="text-3xl">🔥</span> The Real Problem</h3>
+                        <p class="text-zinc-300">Maintenance logs were free-text, handwritten, full of technician shorthand, and scattered across disconnected systems. Critical safety signals were lost in operational noise. Triage was reactive, slow, and entirely manual.</p>
+                        <div class="mt-6 grid grid-cols-3 gap-4 text-center">
+                            <div class="text-center">
+                                <div class="text-4xl font-mono text-amber-400">Free-text</div>
+                                <div class="text-xs text-zinc-400">+ handwritten</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-4xl font-mono text-amber-400">Shorthand</div>
+                                <div class="text-xs text-zinc-400">+ inconsistent terms</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-4xl font-mono text-amber-400">Reactive</div>
+                                <div class="text-xs text-zinc-400">triage only</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass rounded-3xl p-8 border border-white/10">
+                        <h3 class="text-xl font-semibold mb-4">The Triage Gap: Rules-Based Logic Failed</h3>
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="flex-1 bg-zinc-950 rounded-2xl p-6">
+                                <p class="uppercase text-xs mb-2 text-red-400">Failure mode</p>
+                                <p class="font-medium">Syntactic matching (RegEx + Excel) missed context and produced high false negatives.</p>
+                            </div>
+                            <div class="flex-1 bg-emerald-950/50 rounded-2xl p-6 border border-emerald-400/30">
+                                <p class="uppercase text-xs mb-2 text-emerald-400">AI solution</p>
+                                <p class="font-medium">Intent recognition via LLM + RAG → semantic understanding of technician language.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass rounded-3xl p-8 border border-white/10">
+                        <h3 class="text-xl font-semibold mb-6">Product North Star: Trust Before Automation</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="text-center">
+                                <div class="text-5xl mb-3">🛡️</div>
+                                <p class="font-semibold">Trust &gt; Automation</p>
+                                <p class="text-xs text-zinc-400 mt-1">If users don’t trust it, they won’t use it.</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-5xl mb-3">👤</div>
+                                <p class="font-semibold">Human-in-the-Loop</p>
+                                <p class="text-xs text-zinc-400 mt-1">AI suggests. Humans decide.</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-5xl mb-3">📦</div>
+                                <p class="font-semibold">Start Simple</p>
+                                <p class="text-xs text-zinc-400 mt-1">Solve triage pain first. Scale responsibly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-5 space-y-8">
+                    <div class="glass rounded-3xl p-8 border border-white/10 h-full flex flex-col">
+                        <h3 class="text-xl font-semibold mb-6 flex items-center gap-x-3"><span class="text-3xl">🧠</span> Technical Strategy: Pragmatism Over Novelty</h3>
+                        <div class="flex-1">
+                            <div class="bg-zinc-950 rounded-2xl p-6 mb-6">
+                                <div class="flex justify-between text-sm mb-3">
+                                    <span class="font-medium text-violet-400">Chosen: RAG</span>
+                                    <span class="text-emerald-400">Rejected: Fine-tuning</span>
+                                </div>
+                                <ul class="space-y-3 text-sm">
+                                    <li class="flex gap-x-2"><i class="fa-solid fa-circle-check mt-px text-emerald-400"></i> Grounded in service manuals + historical data</li>
+                                    <li class="flex gap-x-2"><i class="fa-solid fa-circle-check mt-px text-emerald-400"></i> Fully auditable citations</li>
+                                    <li class="flex gap-x-2"><i class="fa-solid fa-circle-check mt-px text-emerald-400"></i> Knowledge updates without retraining</li>
+                                    <li class="flex gap-x-2 text-amber-400"><i class="fa-solid fa-triangle-exclamation mt-px"></i> No black-box drift or high maintenance cost</li>
+                                </ul>
+                            </div>
+                            
+                            <h4 class="text-lg font-medium mb-4">Hallucination Safeguards (by design)</h4>
+                            <div class="grid grid-cols-3 gap-4 text-center text-xs">
+                                <div class="glass rounded-2xl py-5">Restricted context<br><span class="text-cyan-400">Only approved docs</span></div>
+                                <div class="glass rounded-2xl py-5">Confidence UX<br><span class="text-cyan-400">&lt;80% = Needs Review</span></div>
+                                <div class="glass rounded-2xl py-5">No auto-lockouts<br><span class="text-cyan-400">Humans retain final say</span></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-auto pt-8 border-t border-white/10">
+                            <h4 class="uppercase text-xs tracking-widest text-emerald-400 mb-4">Measurable Impact</h4>
+                            <div class="grid grid-cols-2 gap-6">
+                                <div>
+                                    <div class="text-5xl font-mono text-emerald-400 metric-number">75%</div>
+                                    <p class="text-zinc-400 text-sm">earlier detection of critical asset issues</p>
+                                </div>
+                                <div>
+                                    <div class="text-5xl font-mono text-emerald-400 metric-number">25%</div>
+                                    <p class="text-zinc-400 text-sm">reduction in operational downtime</p>
+                                </div>
+                                <div>
+                                    <div class="text-5xl font-mono text-emerald-400 metric-number">30-40%</div>
+                                    <p class="text-zinc-400 text-sm">reduction in frontline manual effort</p>
+                                </div>
+                                <div>
+                                    <div class="text-5xl font-mono text-emerald-400 metric-number">30%</div>
+                                    <p class="text-zinc-400 text-sm">improvement in product activation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MORE WORK / EXPERIENCE -->
+    <section id="experience" class="py-24">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <h2 class="section-header heading-font text-5xl tracking-[-1px] mb-12">More work &amp; experience</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-hover glass border border-white/10 rounded-3xl p-8">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <div class="font-semibold">Safety io (MSA Safety)</div>
+                            <div class="text-cyan-400">Product Manager • 2019 – Present</div>
+                        </div>
+                        <span class="text-xs px-3 py-1 rounded-3xl bg-emerald-400/10 text-emerald-400">7+ years</span>
+                    </div>
+                    <ul class="space-y-4 text-sm text-zinc-300">
+                        <li class="flex gap-x-2"><i class="fa-solid fa-circle-check text-cyan-400 mt-px"></i> Led LLM + RAG maintenance intelligence system (75% earlier detection, 25% less downtime)</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-circle-check text-cyan-400 mt-px"></i> Designed model evaluation frameworks + production acceptance criteria for regulated environments</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-circle-check text-cyan-400 mt-px"></i> Built reusable AI orchestration, APIs, and compliance guardrails (ISO/GDPR/NFPA)</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-circle-check text-cyan-400 mt-px"></i> Drove PLG experiments → 30% activation lift and 35% faster time-to-value</li>
+                    </ul>
+                    <div class="mt-8 text-xs uppercase text-zinc-400">Fire services &amp; industrial safety across Europe + North America</div>
+                </div>
+                
+                <div class="card-hover glass border border-white/10 rounded-3xl p-8">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <div class="font-semibold">Colt Technology / Vodafone / Qvantel</div>
+                            <div class="text-cyan-400">Product Manager / Owner • 2009 – 2018</div>
+                        </div>
+                        <span class="text-xs px-3 py-1 rounded-3xl bg-violet-400/10 text-violet-400">9 years</span>
+                    </div>
+                    <ul class="space-y-4 text-sm text-zinc-300">
+                        <li class="flex gap-x-2"><i class="fa-solid fa-circle-check text-cyan-400 mt-px"></i> End-to-end ownership of multi-market SaaS/B2B platforms</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-circle-check text-cyan-400 mt-px"></i> Reduced delivery costs 30% through Agile transformation and governance frameworks</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-circle-check text-cyan-400 mt-px"></i> Mentored global product &amp; engineering teams across 10+ markets</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-circle-check text-cyan-400 mt-px"></i> Aligned product vision with KPIs for seamless international launches</li>
+                    </ul>
+                    <div class="mt-8 text-xs uppercase text-zinc-400">Bengaluru • Helsinki • London</div>
+                </div>
+                
+                <div class="card-hover glass border border-white/10 rounded-3xl p-8">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <div class="font-semibold">Infosys Technologies</div>
+                            <div class="text-cyan-400">Business Analyst • Project Management • 2003 – 2009</div>
+                        </div>
+                        <span class="text-xs px-3 py-1 rounded-3xl bg-amber-400/10 text-amber-400">6 years</span>
+                    </div>
+                    <ul class="space-y-4 text-sm text-zinc-300">
+                        <li class="flex gap-x-2"><i class="fa-solid fa-circle-check text-cyan-400 mt-px"></i> Delivered enterprise software projects under fixed-cost, fixed-scope contracts</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-circle-check text-cyan-400 mt-px"></i> Defined business workflows, integrations, and risk-managed rollouts</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-circle-check text-cyan-400 mt-px"></i> KPI tracking and stakeholder governance for global clients</li>
+                    </ul>
+                    <div class="mt-8 text-xs uppercase text-zinc-400">London • India</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 bg-zinc-900">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <h2 class="section-header heading-font text-5xl tracking-[-1px] mb-12">Core competencies</h2>
+            
+            <div class="flex flex-wrap gap-3">
+                <div class="px-7 py-4 text-base font-medium rounded-3xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 hover:bg-cyan-400 hover:text-white flex items-center gap-x-2">LLM Product Strategy</div>
+                <div class="px-7 py-4 text-base font-medium rounded-3xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 hover:bg-cyan-400 hover:text-white flex items-center gap-x-2">Retrieval-Augmented Generation (RAG)</div>
+                <div class="px-7 py-4 text-base font-medium rounded-3xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 hover:bg-cyan-400 hover:text-white flex items-center gap-x-2">AI Governance &amp; Risk Mitigation</div>
+                <div class="px-7 py-4 text-base font-medium rounded-3xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 hover:bg-cyan-400 hover:text-white flex items-center gap-x-2">Responsible AI Frameworks</div>
+                <div class="px-7 py-4 text-base font-medium rounded-3xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 hover:bg-cyan-400 hover:text-white flex items-center gap-x-2">Evaluation &amp; Acceptance Criteria</div>
+                <div class="px-7 py-4 text-base font-medium rounded-3xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 hover:bg-cyan-400 hover:text-white flex items-center gap-x-2">Product-Led Growth (PLG)</div>
+                <div class="px-7 py-4 text-base font-medium rounded-3xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 hover:bg-cyan-400 hover:text-white flex items-center gap-x-2">Workflow Automation</div>
+                <div class="px-7 py-4 text-base font-medium rounded-3xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 hover:bg-cyan-400 hover:text-white flex items-center gap-x-2">MLOps &amp; Prompt Engineering</div>
+                <div class="px-7 py-4 text-base font-medium rounded-3xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 hover:bg-cyan-400 hover:text-white flex items-center gap-x-2">Cross-functional Leadership</div>
+                <div class="px-7 py-4 text-base font-medium rounded-3xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 hover:bg-cyan-400 hover:text-white flex items-center gap-x-2">Regulated SaaS Platforms</div>
+                <div class="px-7 py-4 text-base font-medium rounded-3xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 hover:bg-cyan-400 hover:text-white flex items-center gap-x-2">Data Pipelines &amp; Analytics</div>
+                <div class="px-7 py-4 text-base font-medium rounded-3xl border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 hover:bg-cyan-400 hover:text-white flex items-center gap-x-2">Compliance-by-Design</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact" class="bg-black py-16 border-t border-white/10">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center gap-x-3 mb-8 md:mb-0">
+                    <div class="text-4xl">👋</div>
+                    <div>
+                        <p class="heading-font text-3xl">Let's build the next generation of responsible AI products together.</p>
+                        <p class="text-zinc-400">Berlin • Remote • Open to conversations</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col items-end">
+                    <a href="mailto:kashiramanathan@gmail.com" 
+                       class="flex items-center gap-x-4 group text-2xl font-light">
+                        kashiramanathan@gmail.com
+                        <span class="text-4xl group-hover:rotate-45">→</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kashiramanathan/" target="_blank" class="mt-6 text-zinc-400 hover:text-white flex items-center gap-x-2">
+                        <i class="fa-brands fa-linkedin"></i>
+                        linkedin.com/in/kashiramanathan
+                    </a>
+                    
+                    <div class="mt-12 text-xs flex items-center gap-x-8 text-zinc-500">
+                        <div>© 2026 Kashi Ramanathan</div>
+                        <div class="flex items-center gap-x-1">
+                            Built with 
+                            <span class="text-red-500">❤️</span> 
+                            and Tailwind
+                        </div>
+                        <div>Single-file • GitHub Pages ready</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // TailwindCSS initialization for the CDN
+        function initializeTailwind() {
+            return {
+                config(userConfig = {}) {
+                    return {
+                        content: [],
+                        theme: {
+                            extend: {},
+                        },
+                        plugins: [],
+                        ...userConfig,
+                    }
+                },
+                theme: {
+                    extend: {},
+                },
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const config = initializeTailwind().config()
+            window.tailwindConfig = config
+            
+            // Optional subtle metric counter animation
+            function animateMetrics() {
+                const metrics = document.querySelectorAll('.metric-number')
+                metrics.forEach((el) => {
+                    const target = parseInt(el.textContent)
+                    let count = 0
+                    const increment = Math.ceil(target / 30)
+                    const timer = setInterval(() => {
+                        count += increment
+                        if (count >= target) {
+                            count = target
+                            clearInterval(timer)
+                        }
+                        el.textContent = count + (el.textContent.includes('%') ? '%' : '')
+                    }, 40)
+                })
+            }
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateMetrics()
+                        observer.disconnect()
+                    }
+                })
+            }, { threshold: 0.6 })
+            
+            const caseSection = document.getElementById('case-study')
+            if (caseSection) observer.observe(caseSection)
+        })
+    </script>
 </body>
 </html>
