@@ -3,207 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kashi Ramanathan — Senior AI Product Manager | LLM &amp; RAG Systems | Trust-First AI">
+    <meta name="description" content="Kashi Ramanathan — Senior AI Product Manager | LLM & RAG Systems | Transforming Messy Data into Trusted Intelligence">
     <title>Kashi Ramanathan | Senior AI Product Manager</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap');
         
-        .tailwind-ready { font-family: 'Inter', system_ui, sans-serif; }
+        :root { --tw-color-accent: #00d4ff; }
+        * { transition: all 0.2s ease-in-out; }
+        .tailwind-ready { font-family: 'Inter', sans-serif; }
         .heading-font { font-family: 'Space Grotesk', sans-serif; }
-
         .hero-bg {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
-            min-height: 100vh;
+            background: radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.08) 0%, transparent 50%);
         }
+        .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+        .section-header::after {
+            content: ''; position: absolute; width: 48px; height: 4px;
+            background: linear-gradient(90deg, #00d4ff, #a855f7);
+            bottom: -12px; left: 0; border-radius: 2px;
+        }
+        .metric-card:hover { border-color: #00d4ff; transform: translateY(-2px); box-shadow: 0 10px 30px -10px rgba(0,212,255,0.2); }
     </style>
 </head>
-<body class="tailwind-ready bg-zinc-950 text-white">
 
-    <!-- NAVBAR -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-screen-2xl mx-auto px-8 py-5 flex items-center justify-between">
-            <div class="flex items-center gap-x-3">
-                <div class="w-9 h-9 rounded-2xl bg-gradient-to-br from-cyan-400 to-violet-500 flex items-center justify-center text-xl font-bold">KR</div>
-                <h1 class="heading-font text-2xl tracking-[-1px]">Kashi Ramanathan</h1>
+<body class="tailwind-ready bg-zinc-950 text-zinc-200">
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/5 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-violet-500 flex items-center justify-center font-bold text-white">KR</div>
+                <span class="heading-font text-xl font-bold tracking-tight text-white">Kashi Ramanathan</span>
             </div>
-            
-            <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
-                <a href="#about" class="hover:text-cyan-400">About</a>
-                <a href="#case-studies" class="hover:text-cyan-400">Case Studies</a>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#impact" class="hover:text-cyan-400">Impact</a>
+                <a href="#case-study" class="hover:text-cyan-400">Case Study</a>
                 <a href="#experience" class="hover:text-cyan-400">Experience</a>
                 <a href="#skills" class="hover:text-cyan-400">Skills</a>
             </div>
-            
-            <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" 
-               class="text-sm font-semibold px-6 py-3 border border-white/30 hover:border-cyan-400 rounded-3xl">
-                Get in touch
-            </a>
+            <a href="mailto:kashiramanathan@gmail.com" class="bg-white text-zinc-950 px-5 py-2 rounded-full text-sm font-bold hover:bg-cyan-400">Contact</a>
         </div>
     </nav>
 
-    <!-- HERO - Full width, not squeezed -->
-    <header id="hero" class="hero-bg flex items-center pt-20">
-        <div class="max-w-screen-2xl mx-auto px-8 py-24 w-full">
-            <div class="max-w-4xl">
-                <!-- Status Bar -->
-                <div class="inline-flex items-center gap-x-2 bg-white/10 text-cyan-400 text-sm font-medium px-6 py-2.5 rounded-3xl border border-white/20 mb-10">
-                    <div class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-                    OPEN TO FULL-TIME &amp; FREELANCING OPPORTUNITIES • BERLIN
+    <header class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 bg-cyan-400/10 text-cyan-400 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-6 border border-cyan-400/20">
+                    <span class="w-2 h-2 bg-cyan-400 rounded-full animate-ping"></span>
+                    Available for Senior AI Product Roles
                 </div>
-
-                <!-- Name -->
-                <h1 class="heading-font text-[4.8rem] md:text-[6.2rem] leading-[1.05] tracking-[-4px] font-semibold mb-3">
-                    Kashi Ramanathan
+                <h1 class="heading-font text-6xl lg:text-8xl font-bold text-white leading-none mb-6">
+                    Turning Messy Data into <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-400">Trusted Intelligence.</span>
                 </h1>
-
-                <!-- Title -->
-                <p class="text-4xl md:text-5xl bg-gradient-to-r from-cyan-300 via-violet-300 to-white bg-clip-text text-transparent font-light mb-8">
-                    Senior AI Product Manager
+                <p class="text-xl text-zinc-400 leading-relaxed max-w-xl mb-8">
+                    Senior AI Product Manager specializing in building <strong>Trust-First AI Systems</strong> for safety-critical operations. I transform unstructured field data into explainable, decision-ready intelligence in regulated SaaS environments.
                 </p>
-
-                <!-- Bio -->
-                <p class="text-xl md:text-2xl text-zinc-300 max-w-2xl leading-relaxed">
-                    Building trust-first AI systems that turn messy operational data into explainable, 
-                    decision-ready intelligence in regulated SaaS environments.
-                </p>
-
-                <!-- Action Buttons -->
-                <div class="mt-14 flex flex-wrap gap-4">
-                    <a href="https://www.linkedin.com/in/kashiramanathan/" 
-                       target="_blank"
-                       class="inline-flex items-center gap-x-3 bg-white text-zinc-950 px-8 h-14 rounded-3xl font-semibold text-lg hover:scale-105">
-                        <i class="fa-brands fa-linkedin text-2xl"></i>
-                        Connect on LinkedIn
-                    </a>
-                    
-                    <a href="mailto:kashiramanathan@gmail.com"
-                       class="inline-flex items-center gap-x-3 border border-white/40 hover:border-white px-8 h-14 rounded-3xl font-medium text-lg">
-                        <i class="fa-solid fa-envelope"></i>
-                        kashiramanathan@gmail.com
-                    </a>
-                    
-                    <a href="Kashi_Ramanathan_Resume.pdf" 
-                       download="Kashi_Ramanathan_Resume.pdf"
-                       class="inline-flex items-center gap-x-3 border border-white/40 hover:border-cyan-400 px-8 h-14 rounded-3xl font-medium text-lg">
-                        <i class="fa-solid fa-download"></i>
-                        Download CV
-                    </a>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#case-study" class="bg-cyan-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-cyan-400 shadow-lg shadow-cyan-500/20">View Case Study</a>
+                    <a href="https://www.linkedin.com/in/kashiramanathan/" target="_blank" class="glass px-8 py-4 rounded-xl font-bold hover:bg-white/5">LinkedIn Profile</a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="glass p-8 rounded-3xl metric-card">
+                    <div class="text-4xl font-bold text-white mb-2">75%</div>
+                    <p class="text-sm text-zinc-400">Earlier detection of critical asset failures</p>
+                </div>
+                <div class="glass p-8 rounded-3xl metric-card">
+                    <div class="text-4xl font-bold text-white mb-2">25%</div>
+                    <p class="text-sm text-zinc-400">Reduction in operational downtime</p>
+                </div>
+                <div class="glass p-8 rounded-3xl metric-card">
+                    <div class="text-4xl font-bold text-white mb-2">30%</div>
+                    <p class="text-sm text-zinc-400">Lower delivery costs via Agile workflows</p>
+                </div>
+                <div class="glass p-8 rounded-3xl metric-card">
+                    <div class="text-4xl font-bold text-white mb-2">35%</div>
+                    <p class="text-sm text-zinc-400">Faster time-to-value for B2B partners</p>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- ABOUT ME -->
-    <section id="about" class="py-24 border-t border-white/10">
-        <div class="max-w-screen-2xl mx-auto px-8">
-            <div class="grid md:grid-cols-12 gap-16">
-                <div class="md:col-span-4">
-                    <h2 class="section-header heading-font text-5xl tracking-[-1px] mb-6">About me</h2>
-                    <p class="text-zinc-400 text-lg leading-relaxed">
-                        I'm a Senior AI Product Manager who ships production-grade LLM + RAG systems that transform unstructured field data into trusted, explainable intelligence — all while maintaining full regulatory compliance and human accountability.
+    <section id="impact" class="py-24 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="heading-font text-4xl font-bold text-white relative section-header mb-16">The Business Case for My Work</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="space-y-4">
+                    <div class="text-cyan-400 text-2xl"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="text-xl font-bold text-white">Risk Mitigation</h3>
+                    <p class="text-zinc-400">Developed RAG-grounded architectures that prevent AI hallucinations in safety-critical workflows, ensuring 100% compliance with NFPA/EN regulations.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="text-violet-400 text-2xl"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="text-xl font-bold text-white">Operational Efficiency</h3>
+                    <p class="text-zinc-400">Cut manual triage time by 30% for fire departments by automating the classification of unstructured maintenance logs into actionable alerts.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="text-emerald-400 text-2xl"><i class="fa-solid fa-rocket"></i></div>
+                    <h3 class="text-xl font-bold text-white">Product-Led Growth</h3>
+                    <p class="text-zinc-400">Drove 20% activation lift through PLG experiments, simplifying complex asset onboarding from days to mere minutes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="case-study" class="py-24 bg-zinc-900/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-12">
+                <h2 class="heading-font text-4xl font-bold text-white mb-4">Featured Case Study</h2>
+                <p class="text-zinc-400 text-lg">Centralized AI Orchestration for Safety-Critical SaaS</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-5 gap-12">
+                <div class="lg:col-span-3 glass p-10 rounded-3xl">
+                    <h3 class="text-2xl font-bold text-white mb-6">The Problem: Shadow AI & Data Fragmentation</h3>
+                    <p class="text-zinc-400 mb-6">
+                        In a multi-market SaaS environment, "Shadow AI" led to bot sprawl and inconsistent outputs. Safety signals were buried in free-text technician logs, making triage reactive and slow.
                     </p>
-                    <div class="mt-10 text-emerald-400 flex items-center gap-x-2 text-sm font-medium">
-                        <i class="fa-solid fa-award"></i>
-                        CEO Innovation Award 2023
-                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">The Solution: Trust-First AI Orchestrator</h3>
+                    <ul class="space-y-4 text-zinc-400 mb-8">
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-cyan-400"></i> <strong>Semantic Understanding:</strong> Deployed LLM + RAG to classify technician language without black-box drift.</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-cyan-400"></i> <strong>Governance-by-Design:</strong> Built an 8-step AI lifecycle with automated guardrails for Legal & InfoSec approval.</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-cyan-400"></i> <strong>Human-in-the-Loop:</strong> Designed a "Confidence UX" where AI suggests and humans decide, ensuring accountability.</li>
+                    </ul>
+                    <a href="https://kashiramanathan.notion.site/Building-Trust-First-Al-Products-in-Safety-Critical-Operations-2f8459890af480fb862ad1c9b898e89b" target="_blank" class="text-cyan-400 font-bold hover:underline">Read Full Technical Deep Dive →</a>
                 </div>
-                <div class="md:col-span-8">
-                    <div class="prose prose-invert max-w-none text-lg leading-relaxed text-zinc-300">
-                        <p>Over the past decade I've owned end-to-end product strategy for platforms used by fire services and industrial safety teams across Europe and North America. My recent focus has been building Retrieval-Augmented Generation (RAG) systems that ground LLM outputs in regulatory data, service manuals, and historical incidents — delivering measurable impact in safety-critical operations.</p>
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="bg-zinc-950 p-8 rounded-3xl border border-white/5">
+                        <h4 class="text-sm font-bold text-cyan-400 uppercase tracking-widest mb-4">Outcome</h4>
+                        <div class="text-3xl font-bold text-white mb-2">30-40%</div>
+                        <p class="text-zinc-400">Reduction in frontline manual effort</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CASE STUDIES -->
-    <section id="case-studies" class="py-24 bg-zinc-900">
-        <div class="max-w-screen-2xl mx-auto px-8">
-            <h2 class="section-header heading-font text-5xl tracking-[-1px] mb-12">Featured Case Studies</h2>
-
-            <!-- Case Study 1 -->
-            <div class="mb-24">
-                <div class="flex justify-between items-baseline mb-8">
-                    <div>
-                        <span class="uppercase text-xs tracking-[2px] font-medium text-cyan-400">Case Study 1</span>
-                        <h3 class="heading-font text-4xl tracking-tight">Unstructured Maintenance Log Classification</h3>
-                        <p class="text-zinc-400">Safety io • FireGrid Platform</p>
-                    </div>
-                    <a href="https://kashiramanathan.notion.site/Building-Trust-First-AI-Products-in-Safety-Critical-Operations-2f8459890af480fb862ad1c9b898e89b" target="_blank" 
-                       class="text-cyan-400 hover:text-white flex items-center gap-x-2 text-sm font-medium">
-                        Full Notion Case <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
-                <!-- ... (same content as before) ... -->
-                <div class="grid md:grid-cols-12 gap-8">
-                    <div class="md:col-span-7 space-y-8">
-                        <div class="glass rounded-3xl p-8 border border-white/10">
-                            <h4 class="text-xl font-semibold mb-4">The Challenge</h4>
-                            <p class="text-zinc-300">Free-text, handwritten maintenance logs with inconsistent shorthand made critical safety signals impossible to detect reliably.</p>
-                        </div>
-                    </div>
-                    <div class="md:col-span-5">
-                        <div class="glass rounded-3xl p-8 border border-white/10 h-full">
-                            <h4 class="text-xl font-semibold mb-6">Impact</h4>
-                            <div class="grid grid-cols-2 gap-6">
-                                <div><span class="text-5xl font-mono text-emerald-400">75%</span><br><span class="text-sm text-zinc-400">earlier detection</span></div>
-                                <div><span class="text-5xl font-mono text-emerald-400">25%</span><br><span class="text-sm text-zinc-400">downtime reduction</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Case Study 2 -->
-            <div>
-                <div class="flex justify-between items-baseline mb-8">
-                    <div>
-                        <span class="uppercase text-xs tracking-[2px] font-medium text-cyan-400">Case Study 2</span>
-                        <h3 class="heading-font text-4xl tracking-tight">Centralised AI Orchestration</h3>
-                        <p class="text-zinc-400">Safety io • Multi-Domain SaaS Platform</p>
-                    </div>
-                </div>
-                <div class="glass rounded-3xl p-10 border border-white/10">
-                    <div class="grid md:grid-cols-2 gap-12">
-                        <div>
-                            <h4 class="font-semibold text-lg mb-3">The Problem</h4>
-                            <p class="text-zinc-300">Fragmented AI experimentation across teams, leading to duplicated effort and governance challenges.</p>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-lg mb-3">Solution &amp; Outcomes</h4>
-                            <ul class="space-y-3 text-sm">
-                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Domain-agnostic AI Orchestrator with 8-step lifecycle</li>
-                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Reusable schemas and orchestration workflows</li>
-                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Strong compliance-by-design governance</li>
-                            </ul>
-                        </div>
+                    <div class="bg-zinc-950 p-8 rounded-3xl border border-white/5">
+                        <h4 class="text-sm font-bold text-violet-400 uppercase tracking-widest mb-4">ROI</h4>
+                        <div class="text-3xl font-bold text-white mb-2">Scalable Compliance</div>
+                        <p class="text-zinc-400">Rules approved once, enforced across all subsequent AI requests</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- EXPERIENCE, SKILLS, FOOTER (kept same as previous for brevity) -->
-    <!-- ... (Experience, Skills, and Footer sections remain unchanged from previous version) ... -->
+    <section id="experience" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="heading-font text-4xl font-bold text-white relative section-header mb-16">Career Journey</h2>
+            <div class="space-y-12">
+                <div class="grid md:grid-cols-4 gap-8 border-b border-white/5 pb-12">
+                    <div class="md:col-span-1">
+                        <h3 class="text-xl font-bold text-white">Safety io (MSA Safety)</h3>
+                        <p class="text-cyan-400">Product Manager</p>
+                        <p class="text-zinc-500 text-sm">2019 — Present</p>
+                        <div class="mt-4 inline-block bg-emerald-400/10 text-emerald-400 text-[10px] font-bold px-2 py-1 rounded">CEO INNOVATION AWARD</div>
+                    </div>
+                    <div class="md:col-span-3 space-y-4">
+                        <p class="text-zinc-400">Leading the evolution of FireGrid, a platform for global fire services. Key impact: Automated asset onboarding and transformed reactive maintenance into predictive readiness.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="glass px-3 py-1 rounded-full text-xs">LLM Strategy</span>
+                            <span class="glass px-3 py-1 rounded-full text-xs">API Ecosystems</span>
+                            <span class="glass px-3 py-1 rounded-full text-xs">Regulatory Compliance</span>
+                        </div>
+                    </div>
+                </div>
 
-    <footer id="contact" class="bg-black py-16 border-t border-white/10">
-        <div class="max-w-screen-2xl mx-auto px-8 text-center md:text-left">
-            <p class="heading-font text-3xl mb-2">Let's build responsible AI products together.</p>
-            <p class="text-zinc-400">Berlin • Open to Full-time &amp; Freelancing</p>
-            <div class="mt-10">
-                <a href="mailto:kashiramanathan@gmail.com" class="text-xl hover:text-cyan-400">kashiramanathan@gmail.com</a>
+                <div class="grid md:grid-cols-4 gap-8 border-b border-white/5 pb-12">
+                    <div class="md:col-span-1">
+                        <h3 class="text-xl font-bold text-white">Colt / Vodafone / Qvantel</h3>
+                        <p class="text-cyan-400">Product Owner</p>
+                        <p class="text-zinc-500 text-sm">2009 — 2018</p>
+                    </div>
+                    <div class="md:col-span-3 space-y-4">
+                        <p class="text-zinc-400">Orchestrated multi-market SaaS launches across 10+ regions. Optimized delivery workflows to reduce costs by 30% through Agile transformation and cross-functional leadership.</p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <footer class="py-16 border-t border-white/5 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="heading-font text-3xl font-bold text-white mb-6">Let's build the future of Trusted AI.</h2>
+            <div class="flex justify-center gap-6 mb-12">
+                <a href="mailto:kashiramanathan@gmail.com" class="text-zinc-400 hover:text-white text-2xl"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/kashiramanathan/" class="text-zinc-400 hover:text-white text-2xl"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <p class="text-zinc-500 text-sm">© 2026 Kashi Ramanathan • Berlin, Germany</p>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('%cPortfolio loaded', 'color:#00d4ff');
-        });
-    </script>
 </body>
 </html>
